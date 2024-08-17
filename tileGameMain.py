@@ -66,13 +66,13 @@ def tilemap_Borders(tilemap):
         row = []
         for j in range(cols):
             # Get the surrounding tiles with proper bounds checking
-            t2 = str(tilemap[i][j-1]) if j >= 1 else '0'  # Left
-            t1 = str(tilemap[i-1][j]) if i >= 1 else '0'  # Top
-            t4 = str(tilemap[i][j+1]) if j < cols - 1 else '0'  # Right
-            t5 = str(tilemap[i+1][j]) if i < rows - 1 else '0'  # Bottom
+            t1 = str(tilemap[i][j-1]) if j >= 1 else '0'  # Left
+            t2 = str(tilemap[i-1][j]) if i >= 1 else '0'  # Top
+            t3 = str(tilemap[i][j+1]) if j < cols - 1 else '0'  # Right
+            t4 = str(tilemap[i+1][j]) if i < rows - 1 else '0'  # Bottom
 
             # Combine tiles into the string
-            tile = f"{t1}{t2}{t4}{t5}"
+            tile = f"{t1}{t2}{t3}{t4}"
             
             # Append to the current row
             row.append(tile)
